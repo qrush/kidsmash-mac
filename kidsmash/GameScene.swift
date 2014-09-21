@@ -4,7 +4,7 @@ class GameScene: SKScene {
     var history: Array<String> = []
 
     override func didMoveToView(view: SKView) {
-        self.backgroundColor = NSColor.whiteColor()
+        backgroundColor = NSColor.whiteColor()
     }
 
     override func keyDown(theEvent: NSEvent!) {
@@ -28,19 +28,20 @@ class GameScene: SKScene {
     func addLabel(characters: String) {
         let label = SKLabelNode(fontNamed:"Comic Sans MS")
         label.text = characters
-        
+
+        label.fontSize = 150
         label.fontColor = generateColor()
-        label.fontSize = 200
         label.position = generatePoint()
-        
-        let rotation = SKAction.scaleTo(1.5, duration: 2)
-        label.runAction(rotation)
-        
-        label.runAction(SKAction.fadeOutWithDuration(4), completion: { () -> Void in
-            label.removeFromParent()
+
+        label.runAction(SKAction.scaleTo(1.5, duration: 1))
+
+        label.runAction(SKAction.waitForDuration(1), completion: {
+            label.runAction(SKAction.fadeOutWithDuration(2), completion: {
+                label.removeFromParent()
+            })
         })
-        self.addChild(label)
-        
+
+        addChild(label)
     }
     
     func generateRandom(max: Double) -> Double {
