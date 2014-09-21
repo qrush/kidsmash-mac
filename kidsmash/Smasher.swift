@@ -11,6 +11,9 @@ class Smasher {
     let label: String
     let point: CGPoint
 
+    private let eyes   = [":", ";", "X", "=", "8"]
+    private let mouths = [")", "P", "D", "]", "|"]
+
     var node: SKNode {
         switch shape {
         case .Letter:
@@ -58,8 +61,6 @@ class Smasher {
         return node
     }
 
-
-
     private func generateLetter() -> SKNode {
         let node = SKLabelNode(fontNamed:"Comic Sans MS")
         node.text = label
@@ -100,26 +101,11 @@ class Smasher {
         let label = SKLabelNode(fontNamed:"Comic Sans MS")
         label.fontColor = NSColor.blackColor()
         label.fontSize = 75
-        label.position = CGPoint(x: 50, y: 60)
+        label.position = CGPoint(x: 50, y: 70)
 
-        switch generateRandom(8) {
-        case 0:
-            label.text = ":o"
-        case 1:
-            label.text = ":D"
-        case 2:
-            label.text = ";)"
-        case 3:
-            label.text = "8D"
-        case 4:
-            label.text = "XD"
-        case 5:
-            label.text = ":]"
-        case 6:
-            label.text = ":P"
-        default:
-            label.text = ":)"
-        }
+        let eye = eyes[Int(generateRandom(Double(eyes.count)))]
+        let mouth = mouths[Int(generateRandom(Double(mouths.count)))]
+        label.text = "\(eye)\(mouth)"
 
         label.zRotation = -CGFloat(M_PI_2)
         node.addChild(label)
