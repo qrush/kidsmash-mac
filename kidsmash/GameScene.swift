@@ -2,6 +2,7 @@ import SpriteKit
 
 class GameScene: SKScene {
     var history: Array<String> = []
+    var currentZPosition: CGFloat = 0
 
     override func didMoveToView(view: SKView) {
         backgroundColor = NSColor.whiteColor()
@@ -11,9 +12,7 @@ class GameScene: SKScene {
 
     override func mouseMoved(theEvent: NSEvent!) {
         let center  = theEvent.locationInWindow
-        let smasher = Smasher(point: NSPoint(x: center.x, y: center.y))
-
-        addChild(smasher.generateNode())
+        addSmash(Smasher(point: NSPoint(x: center.x, y: center.y)))
     }
 
     override func keyDown(theEvent: NSEvent!) {
@@ -21,12 +20,19 @@ class GameScene: SKScene {
         if let _ = characters.rangeOfString("[A-Za-z0-9]", options: .RegularExpressionSearch) {
             addLabel(characters)
         } else if characters == " " {
-            addShape()
+            addSmash(Smasher(shape: .Face))
         }
     }
 
     override func mouseDown(theEvent: NSEvent!) {
-        addShape()
+        addSmash(Smasher(shape: .Face))
+    }
+
+    private func addSmash(smasher: Smasher) {
+        let node = smasher.generateNode()
+        node.zPosition = currentZPosition
+        currentZPosition++
+        addChild(node)
     }
 
     private func addLabel(label: String) {
@@ -36,18 +42,12 @@ class GameScene: SKScene {
         if word == "quit" {
             NSApplication.sharedApplication().terminate(self)
         } else {
-            let smasher = Smasher(label: label)
-            addChild(smasher.generateNode())
+            addSmash(Smasher(label: label))
         }
 
         if history.count > 3 {
             history.removeAtIndex(0)
         }
-    }
-
-    private func addShape() {
-        let smasher = Smasher(shape: .Face)
-        addChild(smasher.generateNode())
     }
 
     override func update(currentTime: CFTimeInterval) {
