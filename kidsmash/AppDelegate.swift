@@ -1,5 +1,8 @@
 import Cocoa
 import SpriteKit
+import CoreGraphics
+import QuartzCore
+import ApplicationServices
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {

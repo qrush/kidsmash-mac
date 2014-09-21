@@ -5,6 +5,8 @@ class GameScene: SKScene {
 
     override func didMoveToView(view: SKView) {
         backgroundColor = NSColor.whiteColor()
+
+        view.window!.makeFirstResponder(self)
     }
 
     override func mouseMoved(theEvent: NSEvent!) {
