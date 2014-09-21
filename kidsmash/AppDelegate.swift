@@ -24,7 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var skView: SKView!
 
     override func awakeFromNib() {
-
         // Lock app in full screen mode
         var presentationOptions = NSApplicationPresentationOptions.HideDock.rawValue |
             NSApplicationPresentationOptions.HideMenuBar.rawValue |

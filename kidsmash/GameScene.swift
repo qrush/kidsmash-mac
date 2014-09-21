@@ -1,6 +1,8 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var history: Array<String> = []
+
     override func didMoveToView(view: SKView) {
         self.backgroundColor = NSColor.whiteColor()
     }
@@ -8,24 +10,43 @@ class GameScene: SKScene {
     override func keyDown(theEvent: NSEvent!) {
         let characters = theEvent.characters
         if let _ = characters.rangeOfString("[A-Za-z0-9]", options: .RegularExpressionSearch) {
-            let label = SKLabelNode(fontNamed:"Comic Sans MS")
-            label.text = characters
+            history.append(characters)
 
-            label.fontColor = generateColor()
-            label.fontSize = 200
-            label.position = generatePoint()
+            let word = history.reduce("") { $0 + $1 }
+            if word == "quit" {
+                NSApplication.sharedApplication().terminate(self)
+            } else {
+                addLabel(characters)
+            }
 
-            label.runAction(SKAction.fadeOutWithDuration(4), completion: { () -> Void in
-                label.removeFromParent()
-            })
-            self.addChild(label)
+            if history.count > 3 {
+                history.removeAtIndex(0)
+            }
         }
     }
 
+    func addLabel(characters: String) {
+        let label = SKLabelNode(fontNamed:"Comic Sans MS")
+        label.text = characters
+        
+        label.fontColor = generateColor()
+        label.fontSize = 200
+        label.position = generatePoint()
+        
+        let rotation = SKAction.scaleTo(1.5, duration: 2)
+        label.runAction(rotation)
+        
+        label.runAction(SKAction.fadeOutWithDuration(4), completion: { () -> Void in
+            label.removeFromParent()
+        })
+        self.addChild(label)
+        
+    }
+    
     func generateRandom(max: Double) -> Double {
         return Double(arc4random_uniform(UInt32(max)))
     }
-
+    
     func generateColor() -> NSColor {
         let randomComponent = { () -> CGFloat in
             return CGFloat(self.generateRandom(255) / 255)
