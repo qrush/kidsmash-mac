@@ -41,7 +41,31 @@ class GameScene: SKScene {
             if history.count > 3 {
                 history.removeAtIndex(0)
             }
+        } else if characters == " " {
+            addShape()
         }
+    }
+
+    override func mouseDown(theEvent: NSEvent!) {
+        addShape()
+    }
+
+    func addShape() {
+        let shape = SKShapeNode()
+        shape.path = CGPathCreateWithEllipseInRect(CGRect(x: 0, y: 0, width: 150, height: 150), nil)
+
+        shape.fillColor = generateColor()
+        shape.position = generatePoint()
+        shape.antialiased = true
+        shape.lineWidth = 0
+
+        shape.runAction(SKAction.waitForDuration(1), completion: {
+            shape.runAction(SKAction.fadeOutWithDuration(2), completion: {
+                shape.removeFromParent()
+            })
+        })
+
+        addChild(shape)
     }
 
     func addLabel(characters: String) {
