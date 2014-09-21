@@ -12,7 +12,7 @@ class GameScene: SKScene {
         if let _ = characters.rangeOfString("[A-Za-z0-9]", options: .RegularExpressionSearch) {
             history.append(characters)
 
-            let word = history.reduce("") { $0 + $1 }
+            let word = history.reduce("", +)
             if word == "quit" {
                 NSApplication.sharedApplication().terminate(self)
             } else {
