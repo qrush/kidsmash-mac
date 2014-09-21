@@ -7,6 +7,23 @@ class GameScene: SKScene {
         backgroundColor = NSColor.whiteColor()
     }
 
+    override func mouseMoved(theEvent: NSEvent!) {
+        let center  = theEvent.locationInNode(self)
+        let pointer = SKSpriteNode(imageNamed: "Pointer")
+
+        pointer.position = NSPoint(x: center.x + 256, y: center.y)
+        pointer.color = generateColor()
+        pointer.colorBlendFactor = 1.0
+
+        pointer.runAction(SKAction.waitForDuration(1), completion: {
+            pointer.runAction(SKAction.fadeOutWithDuration(2), completion: {
+                pointer.removeFromParent()
+            })
+        })
+
+        addChild(pointer)
+    }
+
     override func keyDown(theEvent: NSEvent!) {
         let characters = theEvent.characters
         if let _ = characters.rangeOfString("[A-Za-z0-9]", options: .RegularExpressionSearch) {
