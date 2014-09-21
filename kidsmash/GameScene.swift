@@ -10,8 +10,8 @@ class GameScene: SKScene {
     }
 
     override func mouseMoved(theEvent: NSEvent!) {
-        let center  = theEvent.locationInNode(self)
-        let smasher = Smasher(point: NSPoint(x: center.x + 256, y: center.y))
+        let center  = theEvent.locationInWindow
+        let smasher = Smasher(point: NSPoint(x: center.x, y: center.y))
 
         addChild(smasher.generateNode())
     }

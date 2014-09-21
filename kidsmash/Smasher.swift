@@ -75,11 +75,26 @@ class Smasher {
 
     private func generateShape() -> SKNode {
         let node = SKShapeNode()
-        node.path = CGPathCreateWithEllipseInRect(CGRect(x: 0, y: 0, width: 150, height: 150), nil)
+
+        switch generateRandom(3) {
+        case 0:
+            node.path = CGPathCreateWithEllipseInRect(CGRect(x: 0, y: 0, width: 150, height: 150), nil)
+        case 1:
+            node.path = CGPathCreateWithRoundedRect(CGRect(x: 0, y: 0, width: 150, height: 150), 10, 10, nil)
+        default:
+            var triangle = CGPathCreateMutable()
+            CGPathMoveToPoint(triangle, nil, 0, 0)
+            CGPathAddLineToPoint(triangle, nil, 75, 150)
+            CGPathAddLineToPoint(triangle, nil, 150, 0)
+            CGPathAddLineToPoint(triangle, nil, 0, 0)
+
+            node.path = triangle
+        }
+
         node.antialiased = true
         node.fillColor = generateColor()
         node.lineWidth = 0
-        return node;
+        return node
     }
 
     private func generateRandom(max: Double) -> Double {
