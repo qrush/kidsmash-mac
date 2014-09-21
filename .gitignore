@@ -1,0 +1,13 @@
+.repl_history
+build
+resources/*.nib
+resources/*.momd
+resources/*.storyboardc
+*xcuserdata*
+*build-iPhoneSimulator*
+*build-iPhoneOS*
+vendor/Pods
+*.dat*
+vendor/*/DerivedData/*
+tmp/
+*.pbxproj
