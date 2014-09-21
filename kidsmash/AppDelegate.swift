@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var presentationOptions = NSApplicationPresentationOptions.HideDock.rawValue |
             NSApplicationPresentationOptions.HideMenuBar.rawValue |
             NSApplicationPresentationOptions.DisableAppleMenu.rawValue |
-            NSApplicationPresentationOptions.DisableProcessSwitching.rawValue |
+            //NSApplicationPresentationOptions.DisableProcessSwitching.rawValue |
             NSApplicationPresentationOptions.DisableForceQuit.rawValue |
             NSApplicationPresentationOptions.DisableSessionTermination.rawValue |
             NSApplicationPresentationOptions.DisableHideApplication.rawValue
