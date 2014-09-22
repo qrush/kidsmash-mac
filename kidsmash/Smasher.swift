@@ -47,7 +47,7 @@ class Smasher {
         var node = self.node
 
         if point == CGPointZero {
-            node.position = generatePoint()
+            node.position = Random.point()
         } else {
             node.position = point
         }
@@ -64,14 +64,15 @@ class Smasher {
     private func generateLetter() -> SKNode {
         let node = SKLabelNode(fontNamed:"Comic Sans MS")
         node.text = label
+        
         node.fontSize = 150
-        node.fontColor = generateColor()
+        node.fontColor = Random.color()
         return node
     }
 
     private func generatePointer() -> SKNode {
         let node = SKSpriteNode(imageNamed: "Pointer")
-        node.color = generateColor()
+        node.color = Random.color()
         node.colorBlendFactor = 1.0
         return node
     }
@@ -79,7 +80,7 @@ class Smasher {
     private func generateShape() -> SKNode {
         let node = SKShapeNode()
 
-        switch generateRandom(3) {
+        switch Random.double(3) {
         case 0:
             node.path = CGPathCreateWithEllipseInRect(CGRect(x: 0, y: 0, width: 150, height: 150), nil)
         case 1:
@@ -87,24 +88,25 @@ class Smasher {
         default:
             var triangle = CGPathCreateMutable()
             CGPathMoveToPoint(triangle, nil, 0, 0)
-            CGPathAddLineToPoint(triangle, nil, 75, 150)
-            CGPathAddLineToPoint(triangle, nil, 150, 0)
+            CGPathAddLineToPoint(triangle, nil, 80, 160)
+            CGPathAddLineToPoint(triangle, nil, 160, 0)
             CGPathAddLineToPoint(triangle, nil, 0, 0)
 
             node.path = triangle
         }
 
         node.antialiased = true
-        node.fillColor = generateColor()
-        node.lineWidth = 0
+        node.fillColor = Random.color()
+        node.strokeColor = NSColor.blackColor()
+        node.lineWidth = 1
 
         let label = SKLabelNode(fontNamed:"Comic Sans MS")
         label.fontColor = NSColor.blackColor()
         label.fontSize = 75
         label.position = CGPoint(x: 50, y: 70)
 
-        let eye = eyes[Int(generateRandom(Double(eyes.count)))]
-        let mouth = mouths[Int(generateRandom(Double(mouths.count)))]
+        let eye = eyes[Int(Random.double(Double(eyes.count)))]
+        let mouth = mouths[Int(Random.double(Double(mouths.count)))]
         label.text = "\(eye)\(mouth)"
 
         label.zRotation = -CGFloat(M_PI_2)
@@ -112,36 +114,4 @@ class Smasher {
 
         return node
     }
-
-    private func generateRandom(max: Double) -> Double {
-        return Double(arc4random_uniform(UInt32(max)))
-    }
-
-    private func generateColor() -> NSColor {
-        let randomComponent = { () -> CGFloat in
-            return CGFloat(self.generateRandom(255) / 255)
-        }
-
-        return NSColor(calibratedRed: randomComponent(), green: randomComponent(), blue: randomComponent(), alpha: 1.0)
-    }
-
-    private func generatePoint() -> CGPoint {
-        let xMargin = 50.0
-        let yMargin = 75.0
-        let width   = Double(NSScreen.mainScreen().frame.size.width)
-        let height  = Double(NSScreen.mainScreen().frame.size.height)
-
-        var xPos = 0.0
-        var yPos = 0.0
-
-        while xPos < xMargin || xPos > width - xMargin ||
-              yPos < yMargin || yPos > height - yMargin {
-
-                xPos = generateRandom(width)
-                yPos = generateRandom(height)
-        }
-
-        return CGPoint(x: xPos - xMargin, y: yPos - yMargin)
-    }
-
 }
