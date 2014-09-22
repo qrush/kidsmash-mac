@@ -64,7 +64,7 @@ class Smasher {
     private func generateLetter() -> SKNode {
         let node = SKLabelNode(fontNamed:"Comic Sans MS")
         node.text = label
-        
+
         node.fontSize = 150
         node.fontColor = Random.color()
         return node
@@ -97,8 +97,7 @@ class Smasher {
 
         node.antialiased = true
         node.fillColor = Random.color()
-        node.strokeColor = NSColor.blackColor()
-        node.lineWidth = 1
+        node.lineWidth = 0
 
         let label = SKLabelNode(fontNamed:"Comic Sans MS")
         label.fontColor = NSColor.blackColor()

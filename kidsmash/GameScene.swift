@@ -38,7 +38,6 @@ class GameScene: SKScene {
         addSmash(Smasher(shape: .Face))
     }
 
-
     private func colorizeBackground() {
         var action = SKAction.colorizeWithColor(Random.color(), colorBlendFactor: 1.0, duration: 15)
 
