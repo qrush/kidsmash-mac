@@ -12,7 +12,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         backgroundColor = NSColor.whiteColor()
 
-        background.alpha = 0.3
+        background.alpha = 0.1
         background.position = CGPoint(x: background.frame.size.width / 2, y: background.frame.size.height / 2)
         colorizeBackground()
         addChild(background)
