@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BC3C46F19CF643900FAF311 /* Smasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3C46E19CF643900FAF311 /* Smasher.swift */; };
+		1BC3C47119CFB3A500FAF311 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3C47019CFB3A500FAF311 /* Random.swift */; };
+		1BD1E84019CE5DBB00D36F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1E83F19CE5DBB00D36F4E /* AppDelegate.swift */; };
+		1BD1E84219CE5DBB00D36F4E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1E84119CE5DBB00D36F4E /* GameScene.swift */; };
+		1BD1E84419CE5DBB00D36F4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1BD1E84319CE5DBB00D36F4E /* GameScene.sks */; };
+		1BD1E84619CE5DBB00D36F4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BD1E84519CE5DBB00D36F4E /* Images.xcassets */; };
+		1BD1E84919CE5DBB00D36F4E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD1E84719CE5DBB00D36F4E /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BC3C46E19CF643900FAF311 /* Smasher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Smasher.swift; sourceTree = "<group>"; };
+		1BC3C47019CFB3A500FAF311 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		1BD1E83A19CE5DBB00D36F4E /* kidsmash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsmash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD1E83E19CE5DBB00D36F4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD1E83F19CE5DBB00D36F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BD1E84119CE5DBB00D36F4E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		1BD1E84319CE5DBB00D36F4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		1BD1E84519CE5DBB00D36F4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1BD1E84819CE5DBB00D36F4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BD1E83719CE5DBB00D36F4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BD1E83119CE5DBB00D36F4E = {
+			isa = PBXGroup;
+			children = (
+				1BD1E83C19CE5DBB00D36F4E /* kidsmash */,
+				1BD1E83B19CE5DBB00D36F4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BD1E83B19CE5DBB00D36F4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1E83A19CE5DBB00D36F4E /* kidsmash.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BD1E83C19CE5DBB00D36F4E /* kidsmash */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1E83F19CE5DBB00D36F4E /* AppDelegate.swift */,
+				1BD1E84119CE5DBB00D36F4E /* GameScene.swift */,
+				1BD1E84319CE5DBB00D36F4E /* GameScene.sks */,
+				1BD1E84519CE5DBB00D36F4E /* Images.xcassets */,
+				1BD1E84719CE5DBB00D36F4E /* MainMenu.xib */,
+				1BD1E83D19CE5DBB00D36F4E /* Supporting Files */,
+				1BC3C46E19CF643900FAF311 /* Smasher.swift */,
+				1BC3C47019CFB3A500FAF311 /* Random.swift */,
+			);
+			path = kidsmash;
+			sourceTree = "<group>";
+		};
+		1BD1E83D19CE5DBB00D36F4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1E83E19CE5DBB00D36F4E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BD1E83919CE5DBB00D36F4E /* kidsmash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD1E85819CE5DBB00D36F4E /* Build configuration list for PBXNativeTarget "kidsmash" */;
+			buildPhases = (
+				1BD1E83619CE5DBB00D36F4E /* Sources */,
+				1BD1E83719CE5DBB00D36F4E /* Frameworks */,
+				1BD1E83819CE5DBB00D36F4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kidsmash;
+			productName = kidsmash;
+			productReference = 1BD1E83A19CE5DBB00D36F4E /* kidsmash.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BD1E83219CE5DBB00D36F4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = quaranto;
+				TargetAttributes = {
+					1BD1E83919CE5DBB00D36F4E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 1BD1E83519CE5DBB00D36F4E /* Build configuration list for PBXProject "kidsmash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BD1E83119CE5DBB00D36F4E;
+			productRefGroup = 1BD1E83B19CE5DBB00D36F4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BD1E83919CE5DBB00D36F4E /* kidsmash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BD1E83819CE5DBB00D36F4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD1E84419CE5DBB00D36F4E /* GameScene.sks in Resources */,
+				1BD1E84619CE5DBB00D36F4E /* Images.xcassets in Resources */,
+				1BD1E84919CE5DBB00D36F4E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BD1E83619CE5DBB00D36F4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC3C47119CFB3A500FAF311 /* Random.swift in Sources */,
+				1BD1E84219CE5DBB00D36F4E /* GameScene.swift in Sources */,
+				1BD1E84019CE5DBB00D36F4E /* AppDelegate.swift in Sources */,
+				1BC3C46F19CF643900FAF311 /* Smasher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1BD1E84719CE5DBB00D36F4E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD1E84819CE5DBB00D36F4E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BD1E85619CE5DBB00D36F4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1BD1E85719CE5DBB00D36F4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1BD1E85919CE5DBB00D36F4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kidsmash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1BD1E85A19CE5DBB00D36F4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kidsmash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BD1E83519CE5DBB00D36F4E /* Build configuration list for PBXProject "kidsmash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD1E85619CE5DBB00D36F4E /* Debug */,
+				1BD1E85719CE5DBB00D36F4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD1E85819CE5DBB00D36F4E /* Build configuration list for PBXNativeTarget "kidsmash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD1E85919CE5DBB00D36F4E /* Debug */,
+				1BD1E85A19CE5DBB00D36F4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BD1E83219CE5DBB00D36F4E /* Project object */;
+}
