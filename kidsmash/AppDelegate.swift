@@ -37,7 +37,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSApplicationPresentationOptions.DisableHideApplication.rawValue
 
         var fullScreenOptions = [NSFullScreenModeApplicationPresentationOptions: presentationOptions]
-        window.contentView.enterFullScreenMode(NSScreen.mainScreen(), withOptions: fullScreenOptions)
+        if let view = self.window.contentView as? NSView {
+           view.enterFullScreenMode(NSScreen.mainScreen()!, withOptions: fullScreenOptions)
+        }
     }
 
     func applicationDidFinishLaunching(aNotification: NSNotification?) {

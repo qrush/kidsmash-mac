@@ -16,8 +16,8 @@ struct Random {
     static func point() -> CGPoint {
         let xMargin = 50.0
         let yMargin = 75.0
-        let width   = Double(NSScreen.mainScreen().frame.size.width)
-        let height  = Double(NSScreen.mainScreen().frame.size.height)
+        let width   = Double(NSScreen.mainScreen()!.frame.size.width)
+        let height  = Double(NSScreen.mainScreen()!.frame.size.height)
 
         var xPos = 0.0
         var yPos = 0.0
